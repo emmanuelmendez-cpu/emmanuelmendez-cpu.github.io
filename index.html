@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Emmanuel Méndez — Perfil</title>
+  
+  <!-- OPTIMIZACIÓN PARA BUSCADORES (SEO) -->
+  <meta name="description" content="Página personal de Emmanuel Méndez Rosales Joel, estudiante de Ingeniería de Inteligencia Artificial en la UNMSM y especialista en redes y ciberseguridad.">
+  <meta name="keywords" content="Emmanuel Méndez, Emmanuel Méndez Rosales Joel, UNMSM, UNI, Inteligencia Artificial, CCNA Cisco, Ciberseguridad, Ethical Hacking, Perfil Profesional">
+  <meta name="author" content="Emmanuel Méndez Rosales Joel">
+
   <style>
     /* --- CONFIGURACIÓN GENERAL --- */
     * {
@@ -32,7 +38,7 @@
       display: block;
     }
 
-    /* Capa de degradado oscuro idéntica al modelo original */
+    /* Capa de degradado oscuro para fundirse con el fondo */
     .degradado-banner {
       position: absolute;
       top: 0;
@@ -40,23 +46,6 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(to bottom, rgba(13, 13, 13, 0.1) 0%, rgba(13, 13, 13, 0.7) 70%, rgba(13, 13, 13, 1) 100%);
-    }
-
-    /* Menú estético superior inspirado en el modelo Henry McDonald */
-    .menu-superior {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-      display: flex;
-      gap: 20px;
-      z-index: 20;
-    }
-
-    .menu-superior span {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 13px;
-      font-family: sans-serif;
-      cursor: pointer;
     }
 
     /* --- PARTE INFERIOR: CONTENEDOR PRINCIPAL CENTRADO --- */
@@ -210,6 +199,14 @@
       margin-right: 8px;
     }
 
+    .meta-curso {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+      font-family: sans-serif;
+    }
+
     /* --- FOOTER --- */
     footer {
       margin-top: 60px;
@@ -223,9 +220,6 @@
 
   <!-- 1. PARTE SUPERIOR: FOTO OFICIAL DE LA UNIVERSIDAD CON DEGRADADO -->
   <div class="contenedor-banner">
-    <!-- Menú estético superior del modelo original -->
-    
-    <!-- Imagen oficial de la Ciudad Universitaria UNMSM -->
     <img 
       class="banner-foto" 
       src="https://www.unmsm.edu.pe/img/universidad/sedes/ciudad-universitaria.png" 
@@ -274,15 +268,41 @@
 
     <hr>
 
-    <!-- CURSOS -->
-    <h2>Cursos — 1er Semestre</h2>
+    <!-- CURSOS PREGRADO UNMSM -->
+    <h2>Cursos — 1er Semestre (UNMSM)</h2>
     <ul>
       <li>Redacción y Técnicas de Comunicación Efectiva I</li>
       <li>Métodos de Estudio Universitario</li>
       <li>Cálculo 1</li>
       <li>Álgebra y Geometría Analítica</li>
       <li>Investigación Formativa</li>
-      <li>Introducción a la Computación, Ingeniería e Inteligencia Artificial</li>
+      <li>
+        Introducción a la Computación, Ingeniería e Inteligencia Artificial
+        <span class="meta-curso">Código: ICC-UNMSM (G3) 103 — Horario: Lunes (10:00 a.m. - 1:00 p.m. y 2:00 p.m. - 4:00 p.m.)</span>
+      </li>
+    </ul>
+
+    <hr>
+
+    <!-- CURSOS DE ESPECIALIZACIÓN UNI -->
+    <h2>Cursos de Especialización — Ciberseguridad & Redes (UNI)</h2>
+    <ul>
+      <li>
+        <strong>PIT549 CCNA CISCO: Fundamentos de Redes</strong>
+        <span class="meta-curso">Horario: Sábados 8:00 a.m. - 12:00 p.m. | Periodo: 23 de mayo al 27 de junio de 2026</span>
+      </li>
+      <li>
+        <strong>PIT551 Ciberseguridad: Análisis de malware (C|AM)</strong>
+        <span class="meta-curso">Horario: Sábados 4:00 p.m. - 7:00 p.m. | Periodo: 23 de mayo al 27 de junio de 2026</span>
+      </li>
+      <li>
+        <strong>PIT552 Ciberseguridad: CyberSOC (C|CS)</strong>
+        <span class="meta-curso">Horario: Lunes 7:00 p.m. - 10:00 p.m. | Periodo: 25 de mayo al 06 de julio de 2026</span>
+      </li>
+      <li>
+        <strong>PIT553 Ciberseguridad: Ethical Hacking (C|EH)</strong>
+        <span class="meta-curso">Especialización técnica en evaluación de vulnerabilidades y pruebas de penetración</span>
+      </li>
     </ul>
 
     <hr>
@@ -311,7 +331,7 @@
     </ul>
 
     <footer>
-      Emmanuel Méndez Rosales · UNMSM 2026
+      Emmanuel Méndez Rosales Joel · UNMSM 2026
     </footer>
 
   </main>
