@@ -5,16 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Emmanuel Méndez — Perfil</title>
   
-  <!-- OPTIMIZACIÓN PARA BUSCADORES (SEO) -->
   <meta name="description" content="Página personal de Emmanuel Méndez Rosales Joel, estudiante de Ingeniería de Inteligencia Artificial en la UNMSM y especialista en redes y ciberseguridad.">
   <meta name="keywords" content="Emmanuel Méndez, Emmanuel Méndez Rosales Joel, UNMSM, UNI, Inteligencia Artificial, CCNA Cisco, Ciberseguridad, Ethical Hacking, Perfil Profesional">
   <meta name="author" content="Emmanuel Méndez Rosales Joel">
 
   <style>
-    /* --- CONFIGURACIÓN GENERAL --- */
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+
     body {
       background-color: #0d0d0d;
       color: #e8e8e8;
@@ -23,7 +20,6 @@
       padding: 0;
     }
 
-    /* --- PARTE SUPERIOR: BANNER DE LA UNIVERSIDAD CON DEGRADADO --- */
     .contenedor-banner {
       position: relative;
       width: 100%;
@@ -38,27 +34,22 @@
       display: block;
     }
 
-    /* Capa de degradado oscuro para fundirse con el fondo */
     .degradado-banner {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(13, 13, 13, 0.1) 0%, rgba(13, 13, 13, 0.7) 70%, rgba(13, 13, 13, 1) 100%);
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to bottom, rgba(13,13,13,0.1) 0%, rgba(13,13,13,0.7) 70%, rgba(13,13,13,1) 100%);
     }
 
-    /* --- PARTE INFERIOR: CONTENEDOR PRINCIPAL CENTRADO --- */
     .contenedor-principal {
       max-width: 800px;
       margin: 0 auto;
       padding: 0 40px 60px 40px;
     }
 
-    /* --- BLOQUE DE PERFIL CENTRADO --- */
     .bloque-perfil {
       text-align: center;
-      margin-top: -70px; /* Eleva la foto de perfil para montarla sobre el degradado */
+      margin-top: -70px;
       position: relative;
       z-index: 10;
       margin-bottom: 40px;
@@ -70,7 +61,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #c9a96e;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.9);
       margin-bottom: 20px;
     }
 
@@ -81,11 +72,11 @@
       margin: 0 0 16px 0;
     }
 
-    /* Enlaces de contacto y redes */
     .redes {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-bottom: 32px;
     }
 
@@ -95,19 +86,16 @@
       text-decoration: none;
       border: 1px solid #2a2a2a;
       padding: 6px 14px;
-      background: rgba(20, 20, 20, 0.9);
+      background: rgba(20,20,20,0.9);
       transition: all 0.3s;
     }
 
     .redes a:hover {
       border-color: #c9a96e;
-      background: rgba(201, 169, 110, 0.1);
+      background: rgba(201,169,110,0.1);
     }
 
-    /* Información de la Institución */
-    .informacion-academica {
-      margin-bottom: 20px;
-    }
+    .informacion-academica { margin-bottom: 20px; }
 
     .linea-universidad {
       display: flex;
@@ -124,9 +112,7 @@
       text-decoration: none;
     }
 
-    .universidad-enlace:hover {
-      text-decoration: underline;
-    }
+    .universidad-enlace:hover { text-decoration: underline; }
 
     .logo-u {
       width: 55px;
@@ -134,26 +120,15 @@
       object-fit: contain;
     }
 
-    .facultad {
-      color: #bbb;
-      font-size: 15px;
-      margin: 0 0 6px 0;
-    }
+    .facultad { color: #bbb; font-size: 15px; margin: 0 0 6px 0; }
+    .carrera  { color: #777; font-size: 14px; margin: 0; }
 
-    .carrera {
-      color: #777;
-      font-size: 14px;
-      margin: 0;
-    }
-
-    /* --- SEPARADORES --- */
     hr {
       border: none;
       border-top: 1px solid #1e1e1e;
       margin: 36px 0;
     }
 
-    /* --- TÍTULOS DE SECCIÓN --- */
     h2 {
       font-size: 11px;
       letter-spacing: 3px;
@@ -163,12 +138,7 @@
       margin-bottom: 16px;
     }
 
-    /* --- LISTAS DE CONTENIDO --- */
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+    ul { list-style: none; padding: 0; margin: 0; }
 
     ul li {
       padding: 12px 0;
@@ -178,18 +148,10 @@
       line-height: 1.6;
     }
 
-    ul li:last-child {
-      border-bottom: none;
-    }
+    ul li:last-child { border-bottom: none; }
 
-    a {
-      color: #c9a96e;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: #c9a96e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     .tipo {
       font-size: 10px;
@@ -207,7 +169,79 @@
       font-family: sans-serif;
     }
 
-    /* --- FOOTER --- */
+    /* --- CONTACTOS --- */
+    .contactos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .contactos-grid a {
+      color: #c9a96e;
+      font-size: 13px;
+      text-decoration: none;
+      border: 1px solid #2a2a2a;
+      padding: 6px 14px;
+      background: rgba(20,20,20,0.9);
+      transition: all 0.3s;
+    }
+
+    .contactos-grid a:hover {
+      border-color: #c9a96e;
+      background: rgba(201,169,110,0.1);
+      text-decoration: none;
+    }
+
+    /* --- PROYECTOS --- */
+    .proyectos-grid {
+      display: block;
+    }
+
+    .proyecto {
+      padding: 16px 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .proyecto:last-child { border-bottom: none; }
+
+    .proyecto-titulo {
+      color: #e8e8e8;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .proyecto-desc {
+      color: #777;
+      font-size: 13px;
+      font-family: sans-serif;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .proyecto-img {
+      width: 100%;
+      border: 1px solid #1e1e1e;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .proyecto-link {
+      display: inline-block;
+      font-size: 12px;
+      color: #c9a96e;
+      border: 1px solid #2a2a2a;
+      padding: 5px 12px;
+      font-family: sans-serif;
+      transition: all 0.3s;
+    }
+
+    .proyecto-link:hover {
+      border-color: #c9a96e;
+      background: rgba(201,169,110,0.1);
+      text-decoration: none;
+    }
+
     footer {
       margin-top: 60px;
       font-size: 11px;
@@ -218,48 +252,25 @@
 </head>
 <body>
 
-  <!-- 1. PARTE SUPERIOR: FOTO OFICIAL DE LA UNIVERSIDAD CON DEGRADADO -->
   <div class="contenedor-banner">
-    <img 
-      class="banner-foto" 
-      src="https://www.unmsm.edu.pe/img/universidad/sedes/ciudad-universitaria.png" 
-      alt="Ciudad Universitaria UNMSM"
-    />
+    <img class="banner-foto" src="https://www.unmsm.edu.pe/img/universidad/sedes/ciudad-universitaria.png" alt="Ciudad Universitaria UNMSM"/>
     <div class="degradado-banner"></div>
   </div>
 
-  <!-- 2. CONTENEDOR DE DATOS ABAJO -->
   <main class="contenedor-principal">
 
-    <!-- BLOQUE CENTRADO: FOTO MÍA Y DATOS DE CONTACTO / ACADÉMICOS -->
     <div class="bloque-perfil">
-      <!-- Foto Mía -->
-      <img
-        class="foto-mia"
-        src="https://i.ibb.co/gb3KfpyY/image.jpg"
-        alt="Foto de Emmanuel"
-      />
-      
-      <!-- Nombre -->
+      <img class="foto-mia" src="https://i.ibb.co/gb3KfpyY/image.jpg" alt="Foto de Emmanuel"/>
       <h1>Emmanuel Méndez Rosales Joel</h1>
-      
-      <!-- Redes / Contacto -->
       <div class="redes">
         <a href="mailto:joel.mendezr@unmsm.edu.pe">joel.mendezr@unmsm.edu.pe</a>
         <a href="https://www.linkedin.com/in/emmanuel-joel-m%C3%A9ndez-rosales-b70171406/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/emmanuelmendez-cpu" target="_blank">GitHub</a>
       </div>
-
-      <!-- Datos Académicos -->
       <div class="informacion-academica">
         <div class="linea-universidad">
-          <a class="universidad-enlace" href="https://www.unmsm.edu.pe/" target="_blank">
-            Universidad Nacional Mayor de San Marcos
-          </a>
-          <img 
-            class="logo-u" 
-            src="https://i.ibb.co/pjmSLpKb/logo.jpg" 
-            alt="Logo UNMSM"
-          />
+          <a class="universidad-enlace" href="https://www.unmsm.edu.pe/" target="_blank">Universidad Nacional Mayor de San Marcos</a>
+          <img class="logo-u" src="https://i.ibb.co/pjmSLpKb/logo.jpg" alt="Logo UNMSM"/>
         </div>
         <p class="facultad">Facultad de Ingeniería de Sistemas e Informática</p>
         <p class="carrera">Computer Science specialized in Artificial Intelligence</p>
@@ -277,8 +288,8 @@
       <li>Álgebra y Geometría Analítica</li>
       <li>Investigación Formativa</li>
       <li>
-        Introducción a la Computación, Ingeniería e Inteligencia Artificial
-        <span class="meta-curso">Código: ICC-UNMSM (G3) 103 — Horario: Lunes (10:00 a.m. - 1:00 p.m. y 2:00 p.m. - 4:00 p.m.)</span>
+        Ciencias de la Computación
+        <span class="meta-curso">Docente: <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank">Ernesto Cuadros</a></span>
       </li>
     </ul>
 
@@ -289,46 +300,55 @@
     <ul>
       <li>
         <strong>PIT549 CCNA CISCO: Fundamentos de Redes</strong>
-        <span class="meta-curso"> Modelos OSI y TCP/IP, direccionamiento IPv4/IPv6, 
-subnetting, configuración de routers y switches Cisco, 
-protocolos de routing (RIP, OSPF), VLANs y seguridad básica de red.</span>
+        <span class="meta-curso">Modelos OSI y TCP/IP, direccionamiento IPv4/IPv6, subnetting, configuración de routers y switches Cisco, protocolos de routing (RIP, OSPF), VLANs y seguridad básica de red.</span>
       </li>
       <li>
         <strong>PIT551 Ciberseguridad: Análisis de malware (C|AM)</strong>
-        <span class="meta-curso"> Tipos de malware (virus, troyanos, ransomware, 
-spyware), análisis estático y dinámico, ingeniería inversa 
-básica, sandboxing, herramientas como IDA Pro y Wireshark, 
-informes de amenazas.</span>
+        <span class="meta-curso">Tipos de malware (virus, troyanos, ransomware, spyware), análisis estático y dinámico, ingeniería inversa básica, sandboxing, herramientas como IDA Pro y Wireshark, informes de amenazas.</span>
       </li>
       <li>
         <strong>PIT552 Ciberseguridad: CyberSOC (C|CS)</strong>
-        <span class="meta-curso"> Operaciones de un SOC, monitoreo de eventos de 
-seguridad, gestión de alertas, análisis de logs, SIEM, 
-respuesta ante incidentes, threat intelligence.</span>
+        <span class="meta-curso">Operaciones de un SOC, monitoreo de eventos de seguridad, gestión de alertas, análisis de logs, SIEM, respuesta ante incidentes, threat intelligence.</span>
       </li>
       <li>
         <strong>PIT553 Ciberseguridad: Ethical Hacking (C|EH)</strong>
-        <span class="meta-curso"> Fases del pentesting (reconocimiento, escaneo, 
-explotación, post-explotación), herramientas como Nmap, 
-Metasploit y Burp Suite, vulnerabilidades OWASP, 
-escalada de privilegios, reporte de vulnerabilidades.</span>
+        <span class="meta-curso">Fases del pentesting (reconocimiento, escaneo, explotación, post-explotación), herramientas como Nmap, Metasploit y Burp Suite, vulnerabilidades OWASP, escalada de privilegios, reporte de vulnerabilidades.</span>
       </li>
     </ul>
 
     <hr>
 
-    <!-- PROFESOR DE CIENCIAS DE LA COMPUTACIÓN -->
-    <h2>Profesor de Ciencias de la Computación</h2>
-    <ul>
-      <li>
-        <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank">Prof. Ernesto Cuadros</a>
-      </li>
-    </ul>
+    <!-- PROYECTOS -->
+    <h2>Proyectos — Python</h2>
+    <div class="proyectos-grid">
+
+      <div class="proyecto">
+        <div class="proyecto-titulo">To-Do List</div>
+        <div class="proyecto-desc">Aplicación de escritorio para gestión de tareas con Python y Tkinter.</div>
+        <img class="proyecto-img" src="https://i.ibb.co/HDXTmhMd/Prueba-con-tkinter.jpg" alt="Captura To-Do List"/>
+        <a class="proyecto-link" href="https://github.com/emmanuelmendez-cpu/Todolist" target="_blank">Ver repositorio →</a>
+      </div>
+
+      <div class="proyecto">
+        <div class="proyecto-titulo">Calculadora</div>
+        <div class="proyecto-desc">Calculadora de escritorio con interfaz gráfica desarrollada en Python.</div>
+        <img class="proyecto-img" src="https://i.ibb.co/yFf21st2/image.png" alt="Captura Calculadora"/>
+        <a class="proyecto-link" href="https://github.com/emmanuelmendez-cpu/Calculadora-" target="_blank">Ver repositorio →</a>
+      </div>
+
+      <div class="proyecto">
+        <div class="proyecto-titulo">Generador y Verificador de Contraseña</div>
+        <div class="proyecto-desc">Herramienta Python para generar y verificar fortaleza de contraseñas.</div>
+        <img class="proyecto-img" src="https://i.ibb.co/nqTSDmDc/image.png" alt="Captura Generador de Contraseña"/>
+        <a class="proyecto-link" href="https://github.com/emmanuelmendez-cpu/Generador-y-verificador-de-contrase-a" target="_blank">Ver repositorio →</a>
+      </div>
+
+    </div>
 
     <hr>
 
-    <!-- EXPERIENCIA Y PROYECTOS -->
-    <h2>Experiencia y Proyectos</h2>
+    <!-- EXPERIENCIA -->
+    <h2>Experiencia Laboral</h2>
     <ul>
       <li>
         <span class="tipo">Freelance</span>
@@ -339,6 +359,18 @@ escalada de privilegios, reporte de vulnerabilidades.</span>
         <strong>Experiencia Laboral en Seguridad</strong> — Cumplimiento de funciones de supervisión, control y aplicación de protocolos operativos en entornos de trabajo profesionales.
       </li>
     </ul>
+
+    <hr>
+
+    <!-- CONTACTOS -->
+    <h2>Contactos</h2>
+    <div class="contactos-grid">
+      <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank">Prof. Ernesto Cuadros</a>
+      <a href="https://www.linkedin.com/in/naysha-puquio-gonzalo-16ou6ts1de/" target="_blank">Naysha Puquio Gonzalo</a>
+      <a href="https://www.linkedin.com/in/roberto-bazan-3b5420406" target="_blank">Roberto Bazan</a>
+      <a href="https://www.linkedin.com/in/diego-alonso-huamani-hancco-0151a0406" target="_blank">Diego Alonso Huamani</a>
+      <a href="https://www.linkedin.com/in/lucero-huincho-huaman%C3%AD-732605343" target="_blank">Lucero Huincho Huamaní</a>
+    </div>
 
     <footer>
       Emmanuel Méndez Rosales Joel · UNMSM 2026
